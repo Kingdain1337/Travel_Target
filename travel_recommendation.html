@@ -3,44 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Agency</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Travel Target</title>
+    <link rel="icon" href="./Resources/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
     <script src = "travel_recommendation.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#destinations">Destinations</a></li>
-                <li><a href="#packages">Packages</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header class="header">
+        <div class="logo">
+            <img id="logoImage" src="./Resources/Travel_Target_Logo.svg" alt="Travel Target">
+            <h2 id="logoText">Travel Target</h2>
+        </div>
+        <nav class="navBar">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
         </nav>
+        <div class="searchBar">
+            <input type="text" placeholder="Enter a destination or keyword">
+            <button type="button">Search</button>
+            <button type="button">Clear</button>
+        </div>
+        </div>
     </header>
 
     <section id="home">
-        <h1>Welcome to Our Travel Agency</h1>
-        <p>Your dream vacation awaits! Explore our destinations and travel packages to find your perfect getaway.</p>
+        <img class="backgroundImage" src="./Resources/boat-4899802_1920.jpg">
+        <h1>
+           <span>Target </span><span style="font-style: italic; color: #ec4640; font-weight: 300;">your</span> <span>Travels</span>
+        </h1>
+        <h2> With Us</h2>
+        <p>Embark on the adventure of a lifetime! Discover our curated destinations and exclusive travel packages tailored to your perfect escape.</p>
     </section>
 
-    <section id="destinations">
-        <h2>Popular Destinations</h2>
-        <!-- Add destination content here -->
-    </section>
-
-    <section id="packages">
-        <h2>Travel Packages</h2>
-        <!-- Add travel package content here -->
-    </section>
+    <div id="home-to-about-gradient">
+        <button>Book now</button>
+    </div>
 
     <section id="about">
+        <img class="backgroundImage" src="./Resources/bubbles-1836457.jpg">
         <h2>About Us</h2>
         <p>Learn more about our agency and what we offer.</p>
     </section>
 
     <section id="contact">
+        <img class="backgroundImage" src="./Resources/Untitled design.png">
         <h2>Contact Us</h2>
         <form>
             <label for="name">Name:</label>
@@ -56,10 +63,11 @@
         </form>
     </section>
 
+    <div id="about-to-contact-gradient">
+    </div>
+
     <footer>
         <p>&copy; 2024 Travel Agency. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
