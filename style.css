@@ -67,31 +67,43 @@ body {
 
 .searchBar input[type="text"] {
     padding: 10px 20px;
-    border-radius: 20px 0 0 20px; /* Rounded corners on the left */
-    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px; 
+    border: 1px solid rgba(255, 255, 255, 0.7); 
     font-size: 18px;
     width: 250px; /* Wider search bar */
     outline: none;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    color: white; /* Text color */
 }
 
 .searchBar button {
     padding: 10px 15px;
-    border:0cm;
-    background-color: rgba(13, 213, 253, 0.774);
-    color: white;
-    font-size: 18px;
+    border: none;
     cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    border: 1px solid rgba(255, 255, 255, 0.7); 
+    color: white; /* Text color */
 }
 
 .searchBar button:first-of-type {
-    border-radius: 0 20px 20px 0; /* Rounded corners on the right */
+    border-radius: 0px; 
     border-left: none;
 }
 
+.searchBar button:first-of-type:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Change background on hover */
+}
+
 .searchBar button:last-of-type {
-    margin-left: 5px;
-    border-radius: 20px;
-    background-color: #3cbd2b;
+    margin-right: 15px;
+    border-radius:  0 20px 20px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.searchBar button:last-of-type:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Change background on hover */
 }
 
 .backgroundImage {
