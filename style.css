@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
     font-family: 'Roboto', sans-serif; /* Using a clean, modern font */
 }
 
@@ -32,15 +33,17 @@ body {
 #logoText {
     font-size: 24px;
     font-weight: bold;
-    color: rgb(55, 178, 202); /* Tomato color for emphasis */
+    color: rgb(55, 178, 202); 
 }
 
 /* Navigation bar styling */
 .navBar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
 }
 
 .navBar a {
@@ -92,33 +95,46 @@ body {
 }
 
 .backgroundImage {
-    position: relative;
-    width: 100%; 
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     height: 100vh;
-    background-image: url('./Resources/boat-4899802_1920.jpg'); 
-    background-size: cover; 
+    object-fit: cover; /* Ensures the image covers the entire section without distortion */
     background-position: center; 
     background-repeat: no-repeat; 
+    background-size: cover; 
     z-index: -1; 
 }
 
 
 #home {
     position: relative; 
-    padding: 0px; 
-    padding-bottom: 120px;
+    padding: 0px;
     margin: 0px;
     z-index: 1; 
+    height: 100vh;
     overflow: hidden;
 }
 
-#home h1 {
+.home-content {
     position: absolute;
-    top:28%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
-    color: #3affef;
+    text-align: center;
+    color: white;
+    max-width: 40%;
+    z-index: 1; /* Ensure content is above the background */
+}
+
+.home-content h1, .home-content h2, .home-content p {
+    margin: 10px 0;
+}
+
+#home h1 {
+
+    color: rgb(71, 224, 255);
     text-align: center;
     font-size: 100px;
     font-weight: 900;
@@ -126,10 +142,6 @@ body {
 }
 
 #home h2 {
-    position: absolute;
-    top:42%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 1;
     color: #f1fbff;
     text-align: center;
@@ -137,10 +149,6 @@ body {
 }
 
 #home p {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 1;
     color: white;
     text-align: center;
@@ -148,19 +156,8 @@ body {
     padding: 20px; 
 }
 
-#home-to-about-gradient {
-    padding: 70px;
-    background: linear-gradient(to bottom, #4588b5 5%, #0c717b 95%);
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    top: 110%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
 
-#home-to-about-gradient button {
+#home button {
     background-color: #5faaff;
     color: white;
     border: none;
@@ -171,7 +168,7 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#home-to-about-gradient button:hover {
+#home button:hover {
     background-color: #6dffe7;
     color: black;
     transform: scale(1.05);
@@ -213,4 +210,21 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+}
+
+.footer {
+    background: #1a1a1a; /* Lighter dark grey to dark grey gradient */
+    border-top: 2px solid black; /* Solid black border at the top */
+    padding: 20px;
+    text-align: center; /* Center the text */
+    color: white;
+    position: relative; /* Position relative to the page layout */
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Set a comfortable font size */
 }

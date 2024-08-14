@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Target - Home</title>
+    <title>Travel Target - Contact Us</title>
     <link rel="icon" href="./Resources/favicon-32x32.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <script src="travel_recommendation.js"></script>
 </head>
 <body>
     <header class="header">
@@ -19,25 +18,25 @@
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact Us</a>
         </nav>
-        <div class="searchBar">
-            <input type="text" placeholder="Enter a destination or keyword">
-            <button type="button">Search</button>
-            <button type="button">Clear</button>
-        </div>
     </header>
 
-    <section id="home">
-        <div class="home-content">
-            <h1>
-               <span>Target </span><span style="font-style: italic; color: #ec4640; font-weight: 300;">your</span> <span>Travels</span>
-            </h1>
-            <h2>With Us</h2>
-            <p>Hit the Bullseye on Your Dream Getaway with Our Expertly Curated Travel Packages.</p>
-            <button>Book now</button>
-        </div>
-        <img class="backgroundImage" src="./Resources/boat-4899802_1920.jpg">
+    <section id="contact">
+        <img class="backgroundImage" src="./Resources/landscape-4659922.jpg">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+
+            <button type="submit">Send</button>
+        </form>
     </section>
-    
+
     <footer class="footer">
         <p>&copy; 2024 Travel Target. All rights reserved.</p>
     </footer>
